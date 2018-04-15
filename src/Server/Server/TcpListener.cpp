@@ -3,7 +3,7 @@
 
 #pragma region TcpListener members
 
-TcpListener::TcpListener(std::string ip, int port, OnMsgReceived rcvHandler)
+TcpListener::TcpListener(std::string ip, USHORT port, OnMsgReceived rcvHandler)
 	: m_ip      (ip)
 	, m_port    (port)
 	, m_onRcv   (rcvHandler)
@@ -45,7 +45,7 @@ void TcpListener::Run()
 		do 
 		{
 			ZeroMemory((char*) &(buff[0]), buff.size());
-			bytesRecieved = recv(clientSk, (char*) &(buff[0]), buff.size(), 0);
+			bytesRecieved = recv(clientSk, (char*) &(buff[0]), (int) buff.size(), 0);
 
 			if (bytesRecieved > 0 && m_onRcv != NULL)
 				m_onRcv(this, clientSk, std::string((char*) &(buff[0]), 0, bytesRecieved));

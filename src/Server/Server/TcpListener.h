@@ -13,7 +13,7 @@ typedef void(*OnMsgReceived)(const TcpListener* sender, SOCKET clientSk, std::st
 class TcpListener
 {
 public:
-	TcpListener(std::string ip, int port, OnMsgReceived rcvHandler);
+	TcpListener(std::string ip, USHORT port, OnMsgReceived rcvHandler);
 	~TcpListener();
 
 	void Run    ();
@@ -22,7 +22,7 @@ public:
 
 private:
 	std::string   m_ip;
-	int           m_port;
+	USHORT        m_port;
 	OnMsgReceived m_onRcv;
 	size_t        m_buffSize;
 

@@ -6,15 +6,15 @@
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
     <Filter Include="TcpListener">
-      <UniqueIdentifier>{2b81c24c-1915-4592-925f-58d1cd20170d}</UniqueIdentifier>
+      <UniqueIdentifier>{efad4a9a-dc28-4368-bfbb-5755a79851ce}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="TcpListener.cpp">
       <Filter>TcpListener</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

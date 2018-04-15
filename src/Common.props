@@ -2,13 +2,16 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
-    <Repo>C:\Users\Dell\Documents\Repos\winsock-example</Repo>
+    <Repo>$(SolutionDir)..\..</Repo>
     <RepoBin>$(Repo)\bin</RepoBin>
     <RepoSrc>$(Repo)\src</RepoSrc>
     <RepoTmp>$(Repo)\tmp</RepoTmp>
   </PropertyGroup>
-  <PropertyGroup />
-  <ItemDefinitionGroup />
+  <PropertyGroup>
+    <OutDir>$(RepoBin)\$(SolutionName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(RepoTmp)\intermediate\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup />	
   <ItemGroup>
     <BuildMacro Include="Repo">
       <Value>$(Repo)</Value>
