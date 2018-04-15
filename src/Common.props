@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <Repo>C:\Users\Dell\Documents\Repos\winsock-example</Repo>
+    <RepoBin>$(Repo)\bin</RepoBin>
+    <RepoSrc>$(Repo)\src</RepoSrc>
+    <RepoTmp>$(Repo)\tmp</RepoTmp>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="Repo">
+      <Value>$(Repo)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="RepoBin">
+      <Value>$(RepoBin)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="RepoSrc">
+      <Value>$(RepoSrc)</Value>
+    </BuildMacro>
+    <BuildMacro Include="RepoTmp">
+      <Value>$(RepoTmp)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
